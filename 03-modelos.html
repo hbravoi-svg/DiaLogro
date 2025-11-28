@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Frame con escenas</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img src="grass.jpg" id="grass" />
+        <img src="cielo.jpg" id="sky" />
+
+        <a-asset-item id="car" src="car/scene.gltf"></a-asset-item>
+
+        <a-asset-item
+          src="bulbasaur/bulbasaur-pokemon-go.obj"
+          id="bulbasaur-obj"
+        ></a-asset-item>
+
+        <a-asset-itemz
+          src="bulbasaur/bulbasaur-pokemon-go.mtl"
+          id="bulbasaur-mtl"
+        ></a-asset-item>
+
+        <a-asset-item id="house" src="house/scene.gltf"></a-asset-item>
+
+        <a-asset-item id="Elipsografo" src="Elipsografo/Elip.gltf"></a-asset-item>
+
+        <a-asset-item id="Euclides" src="Euclides/euclides.glb"></a-asset-item>
+
+        <a-asset-item id="Arquitectura" src="Arquitectura_Inca/arquitectura_inca.glb"></a-asset-item>
+
+        <a-asset-item id="QhapaqNian" src="Qhapaq_nian/sitio_arqueologico_puca_pucara.glb"></a-asset-item>
+
+        <a-asset-item id="Inca" src="Sociedad/Inca.glb"></a-asset-item>
+        <a-asset-item id="Chaski" src="Sociedad/Chaski.glb"></a-asset-item>
+
+        <a-asset-item id="Kero" src="Ceramica/Kero.glb"></a-asset-item>
+        <a-asset-item id="Olla" src="Ceramica/Olla.glb"></a-asset-item>
+        <a-asset-item id="Antique" src="Ceramica/Antique.glb"></a-asset-item>
+        <a-asset-item id="Escudilla" src="Ceramica/Escudilla.glb"></a-asset-item>
+        <a-asset-item id="Aribalo" src="Ceramica/Aribalo.glb"></a-asset-item>
+
+        <a-asset-item id="Wiracocha" src="Religion/Wiracocha.glb"></a-asset-item>
+      </a-assets>
+
+      <!-- <a-entity gltf-model="#house" position="-9 0 -4" scale="0.25 0.25 0.25" ></a-entity> MUESTRA DE USO DE UN OBJETO -->
+      
+      <!-- Añadí un objeto modelado, un Elipsografo -->
+      <!-- 
+      <a-entity
+      gltf-model="#Elipsografo"
+      position="0 5 15"
+      scale="0.05 0.05 0.05"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"
+      animation__bounce="property: position; dir: alternate; dur: 2000; loop: true; to: 4 6 5"
+      event-set__mouseenter="_event: mouseenter; scale: 0.15 0.15 0.15"
+      event-set__mouseleave="_event: mouseleave; scale: 0.1 0.1 0.1"
+      event-set__click="_event: click; material.color: red"
+      ></a-entity>
+      <a-text value="Elipsografo" position="-1.7 8.645 10.000" color="#e7e700" scale="3 3 3" side="double" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000" animation__bounce="property: position; dir: alternate; dur: 2000; loop: true; to: 4 10 5"></a-text>
+      -->
+
+      <!-- Añadí un modelo 3D de arquitectura INCA -->
+      <a-entity gltf-model="#Arquitectura"
+        position="0 0 0"
+        rotation="0 240 0"
+        scale="0.5 0.5 0.5">
+      </a-entity>
+      <a-text value="<XD>" position="-3.4 0.5 5.6" color="#1BDEF2" scale="5 5 5" side="double"></a-text>
+
+      <!-- Añadí un modelo 3D de Qhapaq Ñan INCA -->
+      <a-entity gltf-model="#QhapaqNian"
+        position="3.649 -0.622 46.999"
+        rotation="0 240 0"
+        scale="0.7 0.7 0.7">
+      </a-entity>
+      <a-text value="<XD>" position="-3.4 0.5 5.6" color="#1BDEF2" scale="5 5 5" side="double"></a-text>
+
+     <!-- Añadí un modelo 3D de un INCA -->
+      <a-entity gltf-model="#Inca"
+        position="-27 3.2 33"
+        rotation="0 60 0"
+        scale="0.15 0.15 0.15">
+      </a-entity>
+      <a-text value="<XD>" position="-3.4 0.5 5.6" color="#1BDEF2" scale="5 5 5" side="double"></a-text>
+
+     <!-- Añadí un modelo 3D de un CHASKI -->
+      <a-entity gltf-model="#Chaski"
+        position="14 -0.2 57.894"
+        rotation="0 300 0"
+        scale="1 1 1">
+      </a-entity>
+      <a-text value="<XD>" position="-3.4 0.5 5.6" color="#1BDEF2" scale="5 5 5" side="double"></a-text>
+
+     <!-- Añadí un modelo 3D de Aribalo -->
+      <a-entity gltf-model="#Aribalo"
+        position="-18.267 -0.304 26.107"
+        rotation="0 240 0"
+        scale="0.3 0.3 0.3">
+      </a-entity>
+      <a-text value="<XD>" position="-3.4 0.5 5.6" color="#1BDEF2" scale="5 5 5" side="double"></a-text>
+
+     <!-- Añadí un modelo 3D de Olla -->
+      <a-entity gltf-model="#Olla"
+        position="10.186 34.722 42.365"
+        rotation="0 240 0"
+        scale="5 5 5">
+      </a-entity>
+      <a-text value="<XD>" position="-3.4 0.5 5.6" color="#1BDEF2" scale="5 5 5" side="double"></a-text>
+
+     <!-- Añadí un modelo 3D de Kero -->
+      <a-entity gltf-model="#Kero"
+        position="-23.754 0.635 25.412"
+        rotation="0 240 0"
+        scale="0.1 0.1 0.1">
+      </a-entity>
+      <a-text value="<XD>" position="-3.4 0.5 5.6" color="#1BDEF2" scale="5 5 5" side="double"></a-text>
+
+     <!-- Añadí un modelo 3D de Antique -->
+      <a-entity gltf-model="#Antique"
+        position="-20.754 0.332 30.050"
+        rotation="0 240 0"
+        scale="8 8 8">
+      </a-entity>
+      <a-text value="<XD>" position="-3.4 0.5 5.6" color="#1BDEF2" scale="5 5 5" side="double"></a-text>
+
+      <!-- Añadí un modelo 3D de Escudilla -->
+      <a-entity gltf-model="#Escudilla"
+        position="-26.625 -0.296 26.575"
+        rotation="0 240 0"
+        scale="0.010 0.010 0.010">
+      </a-entity>
+      <a-text value="<XD>" position="-3.4 0.5 5.6" color="#1BDEF2" scale="5 5 5" side="double"></a-text>
+
+     <!-- Añadí un modelo 3D de Wiracocha -->
+      <a-entity gltf-model="#Wiracocha"
+        position="-16.502 -0.275 15.908"
+        rotation="0 60 0"
+        scale="2 2 2">
+      </a-entity>
+      <a-text value="<XD>" position="-3.4 0.5 5.6" color="#1BDEF2" scale="5 5 5" side="double"></a-text>
+
+      <!-- Añadí un cubo al plano -->
+      <!--
+      <a-box 
+        position="-8 2.3 -3" 
+        scale="5 5 5"
+        color="red" 
+        rotation="0 45 0"
+        animation="property: scale; dir: alternate; dur: 600; to: 1.1 1.1 1.1; loop: true"
+      ></a-box>
+      <a-text value="Cubo" position="-8.936 5.721 -2.922" color="#12053e" scale="3 3 3" side="double"></a-text>-->
+
+      
+      <!-- Añadí título del curso -->
+      <a-text value="EL IMPERIO DEL TAHUANTINSUYO" position="-5 0.342 12.700" color="#e7e700" scale="3 3 3" side="double"></a-text>
+
+      <a-sky src="#sky"></a-sky>
+
+      <!-- Añadí plano a la Realidad Virtual -->
+      <!--
+      <a-plane
+        width="30"
+        height="30"
+        rotation="-90 0 0"
+        src="#grass"
+        repeat="10 10"
+      ></a-plane> -->
+      
+    </a-scene>
+  </body>
+</html>
